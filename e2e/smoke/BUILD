@@ -2,11 +2,10 @@
 Add a basic smoke-test target below.
 """
 
+load("@alexeagle_rules_pkg//pkg:tar.bzl", "pkg_tar")
 load("@bazel_skylib//rules:build_test.bzl", "build_test")
-# load("@com_myorg_rules_mylang//mylang:defs.bzl", "...")
 
-# Replace with a usage of your rule/macro
-filegroup(name = "empty")
+pkg_tar(name = "empty")
 
 build_test(
     name = "smoke_test",
