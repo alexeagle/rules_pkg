@@ -22,7 +22,7 @@ cat << EOF
 2. Add to your \`MODULE.bazel\` file:
 
 \`\`\`starlark
-bazel_dep(name = "alexeagle_rules_pkg", version = "${TAG:1}")
+bazel_dep(name = "alexeagle_rules_pkg", version = "${TAG:1}", repo_name = "rules_pkg")
 \`\`\`
 
 ## Using WORKSPACE
@@ -32,7 +32,7 @@ Paste this snippet into your \`WORKSPACE.bazel\` file:
 \`\`\`starlark
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
-    name = "alexeagle_rules_pkg",
+    name = "rules_pkg",
     sha256 = "${SHA}",
     strip_prefix = "${PREFIX}",
     url = "https://github.com/alexeagle/rules_pkg/releases/download/${TAG}/${ARCHIVE}",
