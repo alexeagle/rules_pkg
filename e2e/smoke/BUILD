@@ -2,8 +2,8 @@
 Add a basic smoke-test target below.
 """
 
-load("@alexeagle_rules_pkg//pkg:tar.bzl", "pkg_tar")
 load("@bazel_skylib//rules:build_test.bzl", "build_test")
+load("@rules_pkg//pkg:tar.bzl", "pkg_tar")
 
 pkg_tar(name = "empty")
 

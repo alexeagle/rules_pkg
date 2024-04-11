@@ -1,4 +1,4 @@
-bazel_dep(name = "alexeagle_rules_pkg", version = "0.0.0", dev_dependency = True)
+bazel_dep(name = "alexeagle_rules_pkg", version = "0.0.0", dev_dependency = True, repo_name = "rules_pkg")
 bazel_dep(name = "bazel_skylib", version = "1.5.0", dev_dependency = True)
 
 local_path_override(

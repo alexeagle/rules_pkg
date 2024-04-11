@@ -1,6 +1,6 @@
 # Override http_archive for local testing
 local_repository(
-    name = "alexeagle_rules_pkg",
+    name = "rules_pkg",
     path = "../..",
 )
 
@@ -14,7 +14,7 @@ local_repository(
 # you should fetch it *before* calling this.
 # Alternatively, you can skip calling this function, so long as you've
 # already fetched all the dependencies.
-load("@alexeagle_rules_pkg//pkg:repositories.bzl", "rules_pkg_dependencies")
+load("@rules_pkg//:deps.bzl", "rules_pkg_dependencies")
 
 rules_pkg_dependencies()
 
