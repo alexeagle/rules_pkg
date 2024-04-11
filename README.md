@@ -1,6 +1,6 @@
 # Alternative packaging rules for Bazel
 
-Aspect's bazel-lib provides a bare-bones [`tar` rule](https://docs.aspect.build/rulesets/aspect_bazel_lib/docs/tar/)
+Aspect's bazel-lib provides a bare-bones [`tar` rule](https://docs.aspect.build/rulesets/aspect_bazel_lib/docs/tar/) that simply invokes a hermetic, statically linked BSD `tar` binary.
 
 This ruleset provides a thin shim to allow users of https://github.com/bazelbuild/rules_pkg to adopt `tar`
 without having to change much of their BUILD files.
